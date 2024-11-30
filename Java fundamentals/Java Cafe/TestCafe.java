@@ -20,7 +20,7 @@ public class TestCafe {
         double[] lineItems = {3.5, 1.5, 4.0, 4.5};
         System.out.printf("Order total: %s \n\n",C1.getOrderTotal(lineItems));
 
-        System.out.println("----- Display Menu Test-----");
+        System.out.println("----- Display Menu Test -----");
         ArrayList<Double> prices= new ArrayList<Double>();
         prices.add(3.5);
         prices.add(2.5);
