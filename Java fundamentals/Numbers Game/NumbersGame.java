@@ -6,9 +6,10 @@ public class NumbersGame {
         System.out.println("Can you guess the number?");
         System.out.println("If you are not up to the task, you can always type 'q' to quit.");
         int tries=3;
+        int answer = new Random().nextInt(0,10);
         while(true){
             try{
-            int answer = new Random().nextInt(0,10);
+            
             String guess = System.console().readLine();
             
                 if (tries==0){
