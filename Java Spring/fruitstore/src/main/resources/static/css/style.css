@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+
+h1{
+    color: brown;
+}
+
+.cont{
+    width: 50%;
+    margin: 50px auto;
+}
+.orange{
+    color: orange;
+}
+
+table{
+    width: 100%;
+    border: 10px solid pink;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table tr th{
+    text-align: left;
+    font-weight: 700;
+    
+    
+}
+table th, td{
+    padding: 10px;
+    border-bottom: 2px solid pink;
+}
