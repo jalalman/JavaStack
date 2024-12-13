@@ -75,7 +75,7 @@ public class BankAccount {
         System.out.println("Savings Balance : $"+this.savingsBalance);
         System.out.println("Your account Number: " + this.accountNumber);
     }
-
+    
     //ninja bounce 2 
     private String randomAccountNumber(){
         Random randowmAccount= new Random();
