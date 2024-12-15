@@ -1,5 +1,6 @@
 package com.ninjagold.ninjagold;
-
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -39,7 +40,9 @@ public class MainController {
         if (tries > 0) {
             int goldEarned = 0;
             String message;
-            
+            LocalDateTime currentTime = LocalDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d yyyy h:mm:ss a");
+            String formattedDateTime = currentTime.format(formatter);
             // Calculate gold based on activity
             switch (place) {
                 case "farm":
@@ -69,11 +72,12 @@ public class MainController {
             Integer currentGold = (Integer) session.getAttribute("gold");
             session.setAttribute("gold", currentGold + goldEarned);
             session.setAttribute("tries", tries - 1);
+
             
             // Prepare message with color class
             List<String> messages = (List<String>) session.getAttribute("messages");
             String colorClass = goldEarned >= 0 ? "green" : "red";
-            messages.add(0, String.format("<li class='%s'>%s</li> <br>", colorClass, message));
+            messages.add(0, String.format("<li class='%s'>%s (%s)</li> <br> ",colorClass, message,formattedDateTime ));
         }
         return "redirect:/";
     }
