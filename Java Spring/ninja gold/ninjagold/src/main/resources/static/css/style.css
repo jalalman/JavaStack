@@ -67,3 +67,7 @@ body{
 .red{
     color: red;
 }
+
+ul {
+    list-style: none;
+}

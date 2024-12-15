@@ -13,14 +13,18 @@
 <body>
     <div class="gold-cont">
         <p>Your Gold:</p>
-        <p class="gold-stack">0</p>
+        <p class="gold-stack"><c:out value="${gold}"/></p>
+        <p>Tries Remaining: <c:out value="${tries}"/></p>
+        <form action="/reset">
+            <button type="submit">Reset</button>
+        </form>
     </div>
 
     <div class="places-cont">
         <div class="place">
             <h2>Farm</h2>
             <h3>(earns 10-20 gold)</h3>
-            <form action="#" method="post">
+            <form action="/process_money" method="post">
                 <input type="hidden" name="place" value="farm">
                 <button type="submit">Find Gold !</button>
             </form>
@@ -29,7 +33,7 @@
         <div class="place">
             <h2>Cave</h2>
             <h3>(earns 5-10 gold)</h3>
-            <form action="#" method="post">
+            <form action="/process_money" method="post">
                 <input type="hidden" name="place" value="cave">
                 <button type="submit">Find Gold !</button>
             </form>
@@ -38,7 +42,7 @@
         <div class="place">
             <h2>House</h2>
             <h3>(earns 2-5 gold)</h3>
-            <form action="#" method="post">
+            <form action="/process_money" method="post">
                 <input type="hidden" name="place" value="house">
                 <button type="submit">Find Gold !</button>
             </form>
@@ -49,7 +53,7 @@
             <h5>(earns/takes
 
                 0-50 gold)</h5>
-            <form action="#" method="post">
+            <form action="/process_money" method="post">
                 <input type="hidden" name="place" value="quest">
                 <button type="submit">Find Gold !</button>
             </form>
@@ -62,9 +66,11 @@
     <div class="activites-cont">
         <h2>Activites:</h2>
         <div class="activites-event-cont">
-            <p class="green">you earned sadsa</p>
-            <p class="red">you earned sadsa</p>
-            <p class="green">you earned sadsa</p>
+            <ul>
+                <c:forEach var="message" items="${messages}">
+                    ${message}
+                </c:forEach>
+            </ul>
         </div>
     </div>
 </body>
