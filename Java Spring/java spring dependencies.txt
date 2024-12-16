@@ -17,7 +17,12 @@
         <artifactId>webjars-locator</artifactId>
         <version>0.46</version>
 </dependency>
-    
+
+<!-- Thyme Leaf DEPENDENCIES -->   
+<dependency>
+    <groupid>org.springframework.boot</groupid>             
+    <artifactid>spring-boot-starter-thymeleaf</artifactid>
+</dependency>    
 <!-- BOOTSTRAP DEPENDENCIES -->
 <dependency>
         <groupId>org.webjars</groupId>
