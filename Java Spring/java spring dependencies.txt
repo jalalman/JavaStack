@@ -38,8 +38,10 @@
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
-
+####################### in JSP FILE ######################
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page isErrorPage="true" %>    
 <!-- New line below to use the JSP Standard Tag Library -->
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
 ############### application.Properties #################

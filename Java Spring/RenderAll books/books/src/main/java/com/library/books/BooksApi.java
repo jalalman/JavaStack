@@ -3,11 +3,13 @@ package com.library.books;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.library.books.models.Book;
 import com.library.books.services.BookService;
 
@@ -36,16 +38,13 @@ public class BooksApi {
         Book book = bookService.findBook(id);
         return book;
     }
-    @RequestMapping("/api/books/{id}/delete")
+    @DeleteMapping("/api/books/{id}/delete")
     public String delete(@PathVariable("id") Long id) {
         bookService.deleteUserById(id);
          return "done";
     }
 
-    @RequestMapping(value="/api/books/{id}/{title}", method=RequestMethod.PUT)
-    public String update(@PathVariable ("id") Long id,@PathVariable ("title") String title) {
-        return new String();
-    }
+ 
     
     @RequestMapping(value="/api/books/{id}", method=RequestMethod.PUT)
     public Book update(
