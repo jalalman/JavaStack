@@ -46,3 +46,4 @@
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
 ############### application.Properties #################
 spring.mvc.view.prefix=/WEB-INF/
+spring.mvc.hiddenmethod.filter.enabled=true
