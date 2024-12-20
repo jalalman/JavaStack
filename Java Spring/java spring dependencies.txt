@@ -12,22 +12,19 @@
 	<groupId>org.apache.tomcat.embed</groupId>
         <artifactId>tomcat-embed-jasper</artifactId>
 </dependency>
-<dependency>
-        <groupId>org.webjars</groupId>
-        <artifactId>webjars-locator</artifactId>
-        <version>0.46</version>
-</dependency>
 
-<!-- Thyme Leaf DEPENDENCIES -->   
-<dependency>
-    <groupid>org.springframework.boot</groupid>             
-    <artifactid>spring-boot-starter-thymeleaf</artifactid>
-</dependency>    
+
+ 
 <!-- BOOTSTRAP DEPENDENCIES -->
 <dependency>
         <groupId>org.webjars</groupId>
         <artifactId>bootstrap</artifactId>
         <version>5.2.3</version>
+</dependency>
+<dependency>
+        <groupId>org.webjars</groupId>
+        <artifactId>webjars-locator</artifactId>
+        <version>0.46</version>
 </dependency>
 
 ########## HTML LINKS ##############
