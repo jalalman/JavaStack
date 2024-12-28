@@ -57,7 +57,7 @@
                         <form:label path="stuClass" class="form-label">Class:</form:label>
                         <form:select path="stuClass" class="form-select">
                             <c:forEach var="classItem" items="${classes}">
-                                <form:option value="${classItem.id}">${classItem.id} ${classItem.className}</form:option>
+                                <form:option value="${classItem.id}"> ${classItem.className}</form:option>
                             </c:forEach>
                         </form:select>
                         <form:errors path="class" class="text-danger"/>
@@ -86,7 +86,7 @@
                             <tr>
                                 <td><a href="/student/${student.id}">${student.name}</a></td>
                                 <td style="color: ${student.age > 30 ? 'red' : 'black'}">${student.age}</td>
-                                <td >${student.age}</td>
+
                                 <td>${student.grade}th Grade</td>
 
                                 <td>${student.stuClass.className}</td>
