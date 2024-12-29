@@ -63,7 +63,7 @@ public String register(@Valid @ModelAttribute("newUser")User newUser,BindingResu
     }
     else{
         session.setAttribute("loggedUser", loggedUser);
-        return "redirect:/home";
+        return "redirect:/dashboard";
     }
 }
 @GetMapping("/logout")
